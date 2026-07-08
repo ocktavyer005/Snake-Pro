@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Snake Pro</title>
+
+<link rel="stylesheet" href="style.css">
+
+</head>
+<body>
+
+<div id="app">
+
+    <!-- Splash Screen -->
+    <div id="splash">
+
+        <div class="snake">🐍</div>
+
+        <h1>Snake Pro</h1>
+
+        <p>Loading...</p>
+
+    </div>
+
+    <!-- Menu -->
+    <div id="menu" class="hidden">
+
+        <h1 class="title">🐍 Snake Pro</h1>
+
+        <button id="playBtn" class="btn">▶ PLAY</button>
+        <select id="difficulty" class="btn">
+
+    <option value="200">🟢 EASY</option>
+    
+    <option value="150" selected>🟡 NORMAL</option>
+    
+    <option value="90">🔴 HARD</option>
+    
+</select>
+
+        <button id="highScoreBtn" class="btn">🏆 HIGH SCORE</button>
+        <button id="musicBtn" class="btn">
+    🔊 MUSIC ON
+</button>
+<button id="settingsBtn" class="btn">
+    ⚙️ PENGATURAN
+</button>
+
+        <button class="btn">ℹ ABOUT</button>
+        <div id="settingsPanel" class="hidden">
+    
+    <h2>⚙️ PENGATURAN</h2>
+    
+    <button id="wrapBtn" class="btn">
+        🌍 Wrap Mode : OFF
+    </button>
+    
+    <button id="skinBtn" class="btn">
+        🎨 Skin : Hijau
+    </button>
+    
+    <button id="leaderboardBtn" class="btn">
+        🏆 Leaderboard
+    </button>
+    
+    <button id="continueBtn" class="btn">
+        💾 Continue
+    </button>
+    
+    <button id="closeSettings" class="btn">
+        ❌ Tutup
+    </button>
+    
+</div>
+
+    </div>
+
+    <!-- Game -->
+    <div id="game" class="hidden">
+
+        <div class="topBar">
+    
+    <div>
+        🏆 Score :
+        <span id="score">0</span>
+    </div>
+    
+    <button id="pauseBtn">
+        ⏸ PAUSE
+    </button>
+    
+</div>
+
+        <canvas id="gameCanvas"
+                width="360"
+                height="360"></canvas>
+                <div id="gameOver" class="hidden">
+    
+    <h1>💀 GAME OVER</h1>
+    
+    <p>Score : <span id="finalScore">0</span></p>
+    
+    <button id="restartBtn" class="btn">
+        🔄 MAIN LAGI
+    </button>
+    
+    <button id="menuBtn" class="btn">
+        🏠 MENU
+    </button>
+    
+</div>
+<div id="controls">
+    
+    <button id="up">⬆</button>
+    
+    <div class="row">
+        
+        <button id="left">⬅</button>
+        
+        <button id="down">⬇</button>
+        
+        <button id="right">➡</button>
+        
+    </div>
+    
+</div>
+    </div>
+
+</div>
+
+<script src="script.js"></script>
+
+</body>
+</html>
