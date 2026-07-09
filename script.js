@@ -1267,3 +1267,23 @@ continueBtn.onclick = () => {
   draw();
   
 };
+
+// ==========================
+// SERVICE WORKER
+// ==========================
+
+if ("serviceWorker" in navigator) {
+  
+  window.addEventListener("load", () => {
+    
+    navigator.serviceWorker.register("./sw.js")
+      .then(() => {
+        console.log("Service Worker berhasil didaftarkan.");
+      })
+      .catch((err) => {
+        console.log("Service Worker gagal:", err);
+      });
+    
+  });
+  
+}
